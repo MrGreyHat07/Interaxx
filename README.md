@@ -81,15 +81,26 @@ Run the script via the command line with various configurable options.
 ### Sample Terminal Output:
 
 ```plaintext
-Interaxx
-Author: @MrGreyHat
+ python3 script.py -f /home/kali/vdp/live_subdomains.txt -H X-Forwarded-For
+    ____      __
+   /  _/___  / /____  _________ __  ___  __
+   / // __ \/ __/ _ \/ ___/ __ `/ |/_/ |/_/
+ _/ // / / / /_/  __/ /  / /_/ />  <_>  <
+/___/_/ /_/\__/\___/_/   \__,_/_/|_/_/|_|
 
-Enter the OAST domain: example.oast.com
-Enter the time delay (in seconds) between requests: 1
-#1 [2025-03-19 13:54:00] Sending request to: https://example.com
-  [2025-03-19 13:54:00] User-Agent Header: http://1.example.oast.com
-  [2025-03-19 13:54:00] Response Code: 200
-  [2025-03-19 13:54:00] Redirected URI: https://example.com/home
+
+Author: @MrGreyHat
+Enter the OAST domain: cvd7sc9on5bs78io92n04c954hbdxe6s8.oast.site
+Enter the time delay (in seconds) between requests: 5
+#1[2025-03-19 14:07:55] Sending request to: https://sa.services.target.com
+  [2025-03-19 14:07:55] X-Forwarded-For: http://1.cvd7sc9on5bs78io92n04c954hbdxe6s8.oast.site
+  [2025-03-19 14:07:55] Response Code: 302
+  [2025-03-19 14:07:55] Redirected URI: https://sa.services.target.com/
+
+#2[2025-03-19 14:08:00] Sending request to: http://sa.services.target.com
+  [2025-03-19 14:08:00] X-Forwarded-For: http://2.cvd7sc9on5bs78io92n04c954hbdxe6s8.oast.site
+  [2025-03-19 14:08:00] Response Code: 200
+  [2025-03-19 14:08:00] Redirected URI: http://sa.services.target.com/
 ```
 
 ## How It Works
@@ -115,4 +126,3 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 ---
 
 Developed with 💡 by **@MrGreyHat**.
-```
